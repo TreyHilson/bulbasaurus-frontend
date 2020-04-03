@@ -15,6 +15,7 @@ $(() => {
   // Add button functions to view/add/delete plants click action.
   $('#viewplants').on('click', plantEvents.onShowPlants)
   $('#addPlant').on('submit', plantEvents.newPlant)
+    $('#updatePlant').on('submit', plantEvents.onUpdatePlants)
 
     plantEvents.addHandlers()
 

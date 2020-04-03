@@ -19,8 +19,7 @@ const signUpFailure = function () {
 
 const signInSuccess = function (data) {
   $('#message').text('SUCCESS 🤓')
-  $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').hide(2800)
   $('#sign-up').closest('form').find('input[type=text], textarea').val('')
   $('#sign-up').closest('form').find('input[type=password], textarea').val('')
 

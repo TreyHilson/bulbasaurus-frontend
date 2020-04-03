@@ -1,6 +1,7 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
 const getFormFields= require('../../../lib/get-form-fields')
+let plantid =''
 // function to communicate to api and perform GET.
 
 const onShowPlants = function (event) {
@@ -9,6 +10,8 @@ const onShowPlants = function (event) {
     .then(ui.plantShow)
     .catch(ui.plantFailure)
 }
+// Delete plant //
+
 const onDeletePlants = (event) => {
   const id = $(event.target).data('id')
   api.removePlants(id)
@@ -29,6 +32,7 @@ const newPlant = function (event) {
   })
     .catch(ui.plantFailure)
 }
+////////////////////////////////////
 const plantData = function (plant_species, nickname, facts) {
 return {
   "plant": {
@@ -39,6 +43,26 @@ return {
   }
 }
 
+// UPDATE PLANT ////
+const onUpdatePlants = function (event) {
+
+  event.preventDefault()
+
+  const data = getFormFields(event.target)
+
+  api.updatePlant(plantData(data.plant_species, data.nickname, data.fact),plantid)
+  .then(function () {
+    onShowPlants(event)
+  })
+    .catch(ui.plantFailure)
+
+    plantid=""
+}
+
+const onUpdatePlantsid= function(event){
+   plantid= $(event.target).data('id')
+
+}
 // const deletePlant = function (event) {
 //   console.log('you are clicking' + event.target.id)
 //   api.deletePlant(event.target.id)
@@ -48,6 +72,7 @@ return {
 //
 const addHandlers = () => {
   $('.content').on('click', '.btn-delete', onDeletePlants)
+    $('.content').on('click', '.btn-update', onUpdatePlantsid)
 
 }
 
@@ -55,5 +80,6 @@ module.exports = {
   onShowPlants,
   onDeletePlants,
   addHandlers,
-  newPlant
+  newPlant,
+  onUpdatePlants
 }

@@ -37,9 +37,22 @@ const newPlant = function (data) {
   })
 }
 
+const updatePlant = function (data, id) {
+  return $.ajax({
+    url: config.apiUrl + '/plants/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+
+    },
+    data
+  })
+}
+
 
 module.exports = {
   viewPlants,
 removePlants,
-newPlant
+newPlant,
+updatePlant
 }
