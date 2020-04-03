@@ -1,0 +1,23 @@
+{{#each plants as |plant|}}
+  {{log plant}}
+  <section class="section" data-id="{{plant.id}}">
+    <h6>Plant Species:</h6>
+    <h3>
+      {{limit plant.plant_species 13}}
+      <br>
+          {{limit plant.nickname 13}}
+    </h3>
+    <h6>Fun Facts:</h6>
+    <p>
+      {{#if plant.facts}}
+        {{limit plant.facts 56}}
+      {{else}}
+        No fun facts provided.
+      {{/if}}
+    </p>
+
+
+    <button class="btn-delete" data-id="{{plant.id}}"> Delete Plant </button>
+  </section>
+
+{{/each}}

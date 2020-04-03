@@ -10,8 +10,65 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500&display=swap');
+    </style>
     </head>
+
     <body>
-      <h1>Browser Template</h1>
+      <form id="sign-in" class="login">
+  <fieldset>
+    <legend> SIGN IN </legend>
+    <input type="text" name="credentials[email]" placeholder="user@email.com">
+    <input type="password" name="credentials[password]" placeholder="Password">
+
+    <input type="submit" class="btn-gradient green normal" value="sign in!">
+
+
+  </fieldset>
+</form>
+
+      <form id="sign-up" class="">
+  <fieldset>
+    <legend> SIGN UP </legend>
+    <input type="text" name="credentials[email]" placeholder="user@email.com">
+    <input type="password" name="credentials[password]" placeholder="Password">
+    <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+    <input type="submit" class="btn-gradient green normal" value="sign up!">
+  </fieldset>
+</form>
+  <!-- MAILMAN MESSAGE CENTER -->
+    <p id="message" class="mailman"></p>
+
+    <!-- FORM TO ADD PLANT -->
+    <form id="addPlant" class="login">
+<fieldset>
+  <legend> Add Plant </legend>
+  <input type="text" name="plant_species" placeholder="Species name">
+    <input type="text" name="nickname" placeholder="Plant nickname">
+    <input type="text" name="fact" placeholder="Fun Fact">
+  <input type="submit" class="btn-gradient green normal" value="Add Plant!">
+
+
+</fieldset>
+</form>
+
+
+<!-- Content divs -->
+<div id="contentdiv" class="content"></div>
+      <div id="navigation" class="buttonbar">
+      <button id="signout" class="btn-gradient green normal"> Sign Out </button>
+      <button id="newPassword" class="btn-gradient green normal"> Change Password </button>
+      <button id="viewplants" class="btn-gradient green normal"> View Plants
+      </button>
+      <button id="addplant" class="btn-gradient green normal"> Add Plant
+      </button>
+    </div>
+
+
+      <div id="grad1" class="footer">Bulbasaurus™</div>
+
+
+
     </body>
 </html>

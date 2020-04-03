@@ -1,1 +1,107 @@
 @import '~bootstrap/scss/bootstrap';
+body {
+  font-family: 'Baloo Thambi 2', cursive;
+}
+
+
+
+#contentdiv {
+        @include make-row;
+  text-align: center;
+  font-weight: bold;
+  background: red;
+  background: -webkit-linear-gradient(left, orange , yellow, green,   violet);
+  background: -o-linear-gradient(right, orange, yellow, green,   violet);
+  background: -moz-linear-gradient(right, orange, yellow, green,  violet);
+  background: linear-gradient(to right, orange , yellow, green,  violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.section {
+  margin: 3px;;
+}
+
+// #contentdiv:hover {
+//   color: cyan;
+//   cursor: crosshair;
+// }
+.footer{
+      position: fixed;
+      text-align: center;
+      bottom: 0px;
+      width: 100%;
+      display: inline-block;
+
+  }
+
+  .mailman {
+    font-size: 28px;
+    color: green;
+  }
+
+  .buttonbar {
+text-align: center;
+bottom: 100px;
+display: block;
+position: absolute;
+ bottom: 60px;
+  left: 20%;
+
+
+  }
+
+input:hover { color: cyan;
+
+}
+
+.btn-gradient:hover {
+  color: cyan;
+}
+
+
+  #grad1 {
+      background: red;
+      background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
+      background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+      background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+      background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 33px;
+  }
+
+  .btn-gradient {
+	text-decoration: none;
+	color: white;
+	padding: 10px 30px;
+	display: inline-block;
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.21);
+	border-bottom: 4px solid rgba(0,0,0,0.21);
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+.btn-delete {
+text-decoration: none;
+color: violet;
+padding: 10px 30px;
+display: inline-block;
+position: relative;
+border: 1px solid rgba(0,0,0,0.21);
+border-bottom: 4px solid rgba(0,0,0,0.21);
+border-radius: 4px;
+text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  -webkit-text-fill-color: violet;
+}
+
+  .btn-gradient.green {
+	background: rgba(130,200,160,1);
+	background: -moz-linear-gradient(top, rgba(130,200,160,1) 0%, rgba(130,199,158,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(130,200,160,1)), color-stop(100%, rgba(130,199,158,1)));
+	background: -webkit-linear-gradient(top, rgba(130,200,160,1) 0%, rgba(130,199,158,1) 100%);
+	background: -o-linear-gradient(top, rgba(130,200,160,1) 0%, rgba(130,199,158,1) 100%);
+	background: -ms-linear-gradient(top, rgba(130,200,160,1) 0%, rgba(130,199,158,1) 100%);
+	background: linear-gradient(to bottom, rgba(130,200,160,1) 0%, rgba(124, 185, 149, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82c8a0', endColorstr='#82c79e', GradientType=0 );
+}
