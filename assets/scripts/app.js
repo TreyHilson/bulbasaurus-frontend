@@ -10,13 +10,29 @@ const plantEvents = require('./plant/events.js')
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#change-password').on('submit', authEvents.onChangePassword)
+  $('.change-password').on('submit', authEvents.onChangePassword)
   $('#signout').on('click', authEvents.onSignOut)
   // Add button functions to view/add/delete plants click action.
   $('#viewplants').on('click', plantEvents.onShowPlants)
   $('#addPlant').on('submit', plantEvents.newPlant)
-    $('#updatePlant').on('submit', plantEvents.onUpdatePlants)
+  $('#updatePlant').on('submit', plantEvents.onUpdatePlants)
 
-    plantEvents.addHandlers()
+  // Hide all da forms
+  $('#addPlant').hide()
+
+  $('.change-password').hide()
+
+  $('.buttonbar').hide()
+  $('.buttonbar').hide()
+
+  $('#updatePlant').hide()
+    $('#contentdiv').hide()
+
+
+
+
+
+
+  plantEvents.addHandlers()
 
 })

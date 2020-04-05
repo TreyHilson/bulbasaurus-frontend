@@ -1,0 +1,21 @@
+body {
+  background: lighten($info, 50%);
+  min-height: 100vh;
+  padding: 5rem 0 1rem;
+}
+
+
+
+
+nav {
+  @extend .navbar;
+  @extend .navbar-dark;
+  @extend .bg-dark;
+  @extend .fixed-top;
+
+  .app-name {
+    @extend .navbar-brand;
+    @extend .h1;
+    margin-bottom: 0;
+  }
+}

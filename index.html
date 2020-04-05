@@ -16,6 +16,10 @@
     </head>
 
     <body>
+      <!-- MAILMAN MESSAGE CENTER -->
+        <p id="message" class="mailman"></p>
+
+      <!-- Sign in Form -->
       <form id="sign-in" class="login">
   <fieldset>
     <legend> SIGN IN </legend>
@@ -27,8 +31,8 @@
 
   </fieldset>
 </form>
-
-      <form id="sign-up" class="">
+<!-- SIGN UP yo -->
+      <form id="sign-up" class="signUp">
   <fieldset>
     <legend> SIGN UP </legend>
     <input type="text" name="credentials[email]" placeholder="user@email.com">
@@ -37,10 +41,19 @@
     <input type="submit" class="btn-gradient green normal" value="sign up!">
   </fieldset>
 </form>
-  <!-- MAILMAN MESSAGE CENTER -->
-    <p id="message" class="mailman"></p>
+<!-- CHANGE PASSWORD -->
+<form id="change-password" class="change-password">
+  <fieldset>
+    <legend> CHANGE PASSWORD </legend>
+    <input type="text" name="passwords[old]" placeholder="Old password">
+    <input type="password" name="passwords[new]" placeholder="New password">
+    <input type="submit" class="btn-gradient green normal" value="Change Password">
+  </fieldset>
+</form>
 
-    <!-- FORM TO ADD PLANT -->
+
+
+    <!-- FORM TO ADD PLANT THE FORMMMMM -->
     <form id="addPlant" class="addPlant">
 <fieldset>
   <legend> Add Plant </legend>
@@ -51,7 +64,7 @@
 </fieldset>
 </form>
 
-<!-- FORM TO UPDATE PLANT  -->
+<!-- FORM TO UPDATE PLANT FORM -->
 <form id="updatePlant" class="updatePlant">
 <fieldset>
 <legend> Update Herb </legend>
@@ -63,22 +76,26 @@
 </form>
 <!-- FUN IMAGE PLACEMENT -->
 <div class="bulbasaur">
-<iframe src="https://giphy.com/embed/xUPGcgIWt3RSVIIydi" width="170" height="170" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p></div>
+<iframe src="https://giphy.com/embed/xUPGcgIWt3RSVIIydi" width="130" height="130" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p></div>
 
 
 
-<!-- Content divs -->
-<div id="contentdiv" class="content"></div>
-      <div id="navigation" class="buttonbar">
+
+
+<!-- BUTTON BAR : Navigation   -->
+      <div class="buttonbar">
       <button id="signout" class="btn-gradient green normal"> Sign Out </button>
       <button id="newPassword" class="btn-gradient green normal"> Change Password </button>
       <button id="viewplants" class="btn-gradient green normal"> View Plants
       </button>
-      <button id="addplant" class="btn-gradient green normal"> Add Plant
+      <button id="addPlantButton" class="btn-gradient green normal"> Add Plant
       </button>
     </div>
 
+    <!-- Content divs -->
+    <div id="contentdiv" class="content"></div>
 
+<!-- Bulbasaur img -->
       <div id="grad1" class="footer">Bulbasaurus™</div>
 
 

@@ -9,6 +9,7 @@ const onShowPlants = function (event) {
   api.viewPlants()
     .then(ui.plantShow)
     .catch(ui.plantFailure)
+      $('#contentdiv').show()
 }
 // Delete plant //
 
@@ -31,6 +32,8 @@ const newPlant = function (event) {
     onShowPlants(event)
   })
     .catch(ui.plantFailure)
+      $('#addPlant').closest('form').find('input[type=text], textarea').val('')
+      $('#addPlant').hide(1000)
 }
 ////////////////////////////////////
 const plantData = function (plant_species, nickname, facts) {
@@ -45,7 +48,7 @@ return {
 
 // UPDATE PLANT ////
 const onUpdatePlants = function (event) {
-
+$('#updatePlant').hide(1000)
   event.preventDefault()
 
   const data = getFormFields(event.target)
@@ -57,11 +60,24 @@ const onUpdatePlants = function (event) {
     .catch(ui.plantFailure)
 
     plantid=""
+    $('#updatePlant').closest('form').find('input[type=text], textarea').val('')
 }
 
-const onUpdatePlantsid= function(event){
+// ID GRABBER 'id'
+const onUpdatePlantsid = function(event){
    plantid= $(event.target).data('id')
+    $('#updatePlant').show(1000)
 
+
+}
+
+// Button Handlers
+const showAddPlant = function () {
+      $('#addPlant').show(1000)
+}
+
+const showChangePassword = function () {
+      $('.change-password').show(1000)
 }
 // const deletePlant = function (event) {
 //   console.log('you are clicking' + event.target.id)
@@ -73,6 +89,9 @@ const onUpdatePlantsid= function(event){
 const addHandlers = () => {
   $('.content').on('click', '.btn-delete', onDeletePlants)
     $('.content').on('click', '.btn-update', onUpdatePlantsid)
+    $('#addPlantButton').on('click', showAddPlant)
+    $('#newPassword').on('click', showChangePassword)
+
 
 }
 
@@ -81,5 +100,7 @@ module.exports = {
   onDeletePlants,
   addHandlers,
   newPlant,
-  onUpdatePlants
+  onUpdatePlants,
+  showAddPlant,
+  showChangePassword
 }

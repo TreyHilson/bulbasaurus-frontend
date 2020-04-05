@@ -2,63 +2,79 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  $('#message').text('SUCCESS 🤓')
-  $('#message').removeClass()
-  $('#message').addClass('success')
+  $('#message').show()
+  $('#message').text('SUCCESS 🌵')
+  $('#message').hide(2000)
   $('#sign-up').closest('form').find('input[type=text], textarea').val('')
   $('#sign-up').closest('form').find('input[type=password], textarea').val('')
 }
 
 const signUpFailure = function () {
-  $('#message').text('NOOB FAIL 😫')
-  $('#message').removeClass()
+  $('#message').show()
+  $('#message').text('NOOB FAIL 💩')
+  $('#message').hide(2000)
   $('#message').addClass('failure')
   $('#sign-up').closest('form').find('input[type=text], textarea').val('')
   $('#sign-up').closest('form').find('input[type=password], textarea').val('')
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('SUCCESS 🤓')
-  $('#message').hide(2800)
-  $('#sign-up').closest('form').find('input[type=text], textarea').val('')
-  $('#sign-up').closest('form').find('input[type=password], textarea').val('')
+      $('#message').show()
+      $('#message').text('SUCCESS 🌵')
+      $('#message').hide(2800)
+      $('#sign-up').hide(2000)
+      $('#sign-in').hide(2000)
+
+
+
+  $('.buttonbar').show(1300)
+
+  $('#sign-in').closest('form').find('input[type=text], textarea').val('')
+  $('#sign-in').closest('form').find('input[type=password], textarea').val('')
+
 
   store.user = data.user
 }
 
 const signInFailure = function () {
-  $('#message').text('NOOB FAIL 😫')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
+  $('#message').show()
+  $('#message').text('NOOB FAIL 💩')
+  $('#message').hide(2000)
   $('#sign-in').closest('form').find('input[type=text], textarea').val('')
   $('#sign-in').closest('form').find('input[type=password], textarea').val('')
 }
 
 const changePasswordSuccess = function (data) {
-  $('#message').text('PASSWORD CHANGED')
-  $('#message').removeClass()
-  $('#change-password').addClass('hidden')
-  $('#change-password').closest('form').find('input[type=text], textarea').val('')
-  $('#change-password').closest('form').find('input[type=password], textarea').val('')
+  $('#message').show()
+  $('#message').text('SUCCESS 🌵')
+  $('#message').hide(2000)
+    $('#change-password').hide(2000)
+    $('#change-password').closest('form').find('input[type=text], textarea').val('')
+    $('#change-password').closest('form').find('input[type=password], textarea').val('')
 }
 const changePasswordFailure = function () {
-  $('#message').text('NOOB FAIL 😫')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
+    $('#message').show()
+  $('#message').text('NOOB FAIL 💩')
+  $('#message').hide(2000)
   $('#change-password').closest('form').find('input[type=text], textarea').val('')
   $('#change-password').closest('form').find('input[type=password], textarea').val('')
-}
+  }
 
 const signOutSuccess = function (data) {
+    $('#message').show()
   $('#message').text('SIGNED OUT SUCCESSFULLY')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  $('#board').addClass('hidden')
-  $('#change-password').addClass('hidden')
-  $('#firstView').removeClass()
-  $('#navigation').addClass('hidden')
-  $('#scoreBoard').addClass('hidden')
-  $('#lineOne').addClass('hidden')
+  $('#message').hide(2000)
+  $('#contentdiv').hide()
+  $('#addPlant').hide()
+
+  $('.change-password').hide()
+
+  $('.buttonbar').hide()
+  $('.buttonbar').hide()
+
+  $('#updatePlant').hide()
+  $('#sign-in').show(2000)
+
   $('#sign-in').closest('form').find('input[type=text], textarea').val('')
   $('#sign-in').closest('form').find('input[type=password], textarea').val('')
 }
