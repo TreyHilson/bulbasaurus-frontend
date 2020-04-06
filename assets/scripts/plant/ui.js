@@ -17,7 +17,7 @@ const showplantsTemplate = require('../templates/plant-listing.handlebars')
 const plantShow = (data) => {
   console.log(data)
   const showplantsHtml = showplantsTemplate({ plants: data.plants })
-  $('#contentdiv').show(1300)
+  $('#contentdiv').show(800)
   $('#contentdiv').html(showplantsHtml)
 
 }

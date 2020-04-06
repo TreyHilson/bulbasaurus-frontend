@@ -10,6 +10,9 @@ const onShowPlants = function (event) {
     .then(ui.plantShow)
     .catch(ui.plantFailure)
       $('#contentdiv').show()
+      $('#addPlant').hide(800)
+      $('#updatePlant').hide(800)
+      $('.totodile').hide(800)
 }
 // Delete plant //
 
@@ -33,7 +36,8 @@ const newPlant = function (event) {
   })
     .catch(ui.plantFailure)
       $('#addPlant').closest('form').find('input[type=text], textarea').val('')
-      $('#addPlant').hide(1000)
+      $('#addPlant').hide(800)
+      $('#contentdiv').show(800)
 }
 ////////////////////////////////////
 const plantData = function (plant_species, nickname, facts) {
@@ -48,7 +52,7 @@ return {
 
 // UPDATE PLANT ////
 const onUpdatePlants = function (event) {
-$('#updatePlant').hide(1000)
+$('#updatePlant').hide(800)
   event.preventDefault()
 
   const data = getFormFields(event.target)
@@ -61,23 +65,31 @@ $('#updatePlant').hide(1000)
 
     plantid=""
     $('#updatePlant').closest('form').find('input[type=text], textarea').val('')
+    $('#contentdiv').show(800)
 }
 
 // ID GRABBER 'id'
 const onUpdatePlantsid = function(event){
    plantid= $(event.target).data('id')
-    $('#updatePlant').show(1000)
+    $('#updatePlant').show(800)
+  $('#contentdiv').hide(800)
 
 
 }
 
 // Button Handlers
 const showAddPlant = function () {
-      $('#addPlant').show(1000)
+      $('#addPlant').show(800)
+      $('#contentdiv').hide(800)
 }
 
 const showChangePassword = function () {
-      $('.change-password').show(1000)
+      $('.change-password').show(800)
+      $('#contentdiv').hide(800)
+        $('#addPlant').hide(800)
+        $('#updatePlant').HIDE(800)
+
+
 }
 // const deletePlant = function (event) {
 //   console.log('you are clicking' + event.target.id)

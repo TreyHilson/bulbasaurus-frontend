@@ -24,6 +24,7 @@ const signInSuccess = function (data) {
       $('#message').hide(2800)
       $('#sign-up').hide(2000)
       $('#sign-in').hide(2000)
+      $('.totodile').show(800)
 
 
 
@@ -48,7 +49,7 @@ const changePasswordSuccess = function (data) {
   $('#message').show()
   $('#message').text('SUCCESS 🌵')
   $('#message').hide(2000)
-    $('#change-password').hide(2000)
+    $('#change-password').hide(800)
     $('#change-password').closest('form').find('input[type=text], textarea').val('')
     $('#change-password').closest('form').find('input[type=password], textarea').val('')
 }

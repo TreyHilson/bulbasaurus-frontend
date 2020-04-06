@@ -14,7 +14,7 @@ body {
 .hidden {
   display: none;
 }
-
+//  CONTENT DIV
 #contentdiv {
   max-width:80%;
     max-height:800px;
@@ -27,18 +27,21 @@ body {
   font-size: 11px;
   font-weight: bold;
   left: 10%;
+  top: 0;
 position: fixed;
 
 
   background: red;
-  background: -webkit-linear-gradient(left, orange , yellow, green,   violet);
-  background: -o-linear-gradient(right, orange, yellow, green,   violet);
-  background: -moz-linear-gradient(right, orange, yellow, green,  violet);
-  background: linear-gradient(to right, orange , yellow, green,  violet);
+  background: -webkit-linear-gradient(left, orange , green,   violet);
+  background: -o-linear-gradient(right, orange, green,   violet);
+  background: -moz-linear-gradient(right, orange, green,  violet);
+  background: linear-gradient(to right, orange , green,  violet);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
 }
+
+ // SECTION AND FOOTER
 .section {
   margin: 3px;
 }
@@ -56,11 +59,14 @@ position: fixed;
 
   }
 
+  // Bulbasaur && BUTTON BAR -----------
+
 .bulbasaur {
 
   position: absolute;
     top: 0px;
     right: 0px;
+    pointer-events: none
 }
   #message {
     font-size: 53px;
@@ -71,11 +77,21 @@ position: fixed;
 text-align: center;
 display: inline;
 position: absolute;
- bottom: 60px;
-  left: 33%;
+  right: 0px;
+  top: 222px;
 
 
   }
+
+  // totodile ---------------
+
+  .totodile {
+    left: 36%;
+    top: 20%;
+    position: fixed;
+    pointer-events: none
+  }
+
 
 
 input:hover { color: rgba(130,200,160,1);
@@ -159,9 +175,18 @@ max-width:500px;
  border:2px solid green;
  padding:2rem;
  border-radius:5px;
+
 }
 
 .signUp {
+max-width:500px;
+ margin:2rem auto;
+ border:2px solid green;
+ padding:2rem;
+ border-radius:5px;
+}
+
+.change-password {
 max-width:500px;
  margin:2rem auto;
  border:2px solid green;
@@ -175,9 +200,9 @@ max-width:500px;
  border:2px solid green;
  padding:2rem;
  border-radius:5px;
- position: absolute;
-   bottom: 0px;
-   left: 0px;
+ left: 40%;
+ top: 0;
+ position: fixed;
 }
 
 .addPlant {
@@ -187,9 +212,9 @@ max-width:500px;
  padding:2rem;
  border-radius:5px;
  display: block;
- position: absolute;
-  bottom: 0px;
-   left: 18%;
+ left: 40%;
+ top: 0;
+ position: fixed;
 }
 
 
