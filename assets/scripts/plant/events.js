@@ -75,21 +75,24 @@ const onUpdatePlantsid = function(event){
   $('#contentdiv').hide(800)
 
 
+
 }
 
 // Button Handlers
 const showAddPlant = function () {
       $('#addPlant').show(800)
-      $('#contentdiv').hide(800)
+    $('.totodile').hide(800)
+    $('#contentdiv').hide(800)
+    $('#updatePlant').hide(800)
+    $('.change-password').hide(800)
 }
 
 const showChangePassword = function () {
       $('.change-password').show(800)
-      $('#contentdiv').hide(800)
-        $('#addPlant').hide(800)
-        $('#updatePlant').HIDE(800)
-
-
+$('#contentdiv').hide(800)
+$('#addPlant').hide(800)
+$('#updatePlant').hide(800)
+  $('.totodile').hide(800)
 }
 // const deletePlant = function (event) {
 //   console.log('you are clicking' + event.target.id)

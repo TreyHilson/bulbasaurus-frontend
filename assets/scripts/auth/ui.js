@@ -74,7 +74,10 @@ const signOutSuccess = function (data) {
   $('.buttonbar').hide()
 
   $('#updatePlant').hide()
-  $('#sign-in').show(2000)
+  $('#sign-in').show(1000)
+    $('#sign-up').show(1000)
+      $('.totodile').hide()
+
 
   $('#sign-in').closest('form').find('input[type=text], textarea').val('')
   $('#sign-in').closest('form').find('input[type=password], textarea').val('')

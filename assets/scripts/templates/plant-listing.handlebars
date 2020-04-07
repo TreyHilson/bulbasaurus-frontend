@@ -1,9 +1,12 @@
+      {{#if plants}}
+
 {{#each plants as |plant|}}
   {{log plant}}
   <section class="section" data-id="{{plant.id}}">
     <h6>Plant Species:</h6>
     <h3>
       {{limit plant.plant_species 56}}
+
       <br>
           {{limit plant.nickname 56}}
     </h3>
@@ -22,3 +25,7 @@
   </section>
 
 {{/each}}
+
+{{else}}
+Click "Add Plants" button to begin adding plant species & facts!
+{{/if}}

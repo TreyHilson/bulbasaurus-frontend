@@ -19,6 +19,8 @@ const plantShow = (data) => {
   const showplantsHtml = showplantsTemplate({ plants: data.plants })
   $('#contentdiv').show(800)
   $('#contentdiv').html(showplantsHtml)
+  $('#updatePlant').hide(800)
+    $('.change-password').hide(800)
 
 }
 
