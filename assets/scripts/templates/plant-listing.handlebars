@@ -21,7 +21,9 @@
 
 
     <button class="btn-delete" data-id="{{plant.id}}"> Delete Plant </button>
-    <button id="btn-update" class="btn-update" data-id="{{plant.id}}"> Update Plant </button>
+    <button id="btn-update" class="btn-update" data-id="{{plant.id}}"
+    data-plant_species="{{plant.plant_species}}" data-nickname="{{plant.nickname}}"
+    data-facts="{{plant.facts}}"> Update Plant </button>
   </section>
 
 {{/each}}

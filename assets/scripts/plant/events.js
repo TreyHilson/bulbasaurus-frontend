@@ -2,7 +2,12 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const getFormFields= require('../../../lib/get-form-fields')
 let plantid =''
+let plant_species = ''
+let plantNickname = ''
+let plantFacts = ''
 // function to communicate to api and perform GET.
+
+
 
 const onShowPlants = function (event) {
   event.preventDefault()
@@ -14,7 +19,7 @@ const onShowPlants = function (event) {
       $('#updatePlant').hide(800)
       $('.totodile').hide(800)
 }
-// Delete plant //
+// ------------- Delete plant -----------------//
 
 const onDeletePlants = (event) => {
   const id = $(event.target).data('id')
@@ -24,13 +29,14 @@ const onDeletePlants = (event) => {
     })
     .catch(ui.plantFailure)
 }
-// new plant //
+// ----------------- new plant // ADDPLANT -----------------
 const newPlant = function (event) {
   event.preventDefault()
 
   const data = getFormFields(event.target)
 
   api.newPlant(plantData(data.plant_species, data.nickname, data.fact))
+
   .then(function () {
     onShowPlants(event)
   })
@@ -39,7 +45,9 @@ const newPlant = function (event) {
       $('#addPlant').hide(800)
       $('#contentdiv').show(800)
 }
-////////////////////////////////////
+//----------------- Plantdata Fields -----------------
+
+
 const plantData = function (plant_species, nickname, facts) {
 return {
   "plant": {
@@ -50,7 +58,7 @@ return {
   }
 }
 
-// UPDATE PLANT ////
+// ----------------- // UPDATE PLANT Handlebars //// -----------------
 const onUpdatePlants = function (event) {
 $('#updatePlant').hide(800)
   event.preventDefault()
@@ -58,27 +66,34 @@ $('#updatePlant').hide(800)
   const data = getFormFields(event.target)
 
   api.updatePlant(plantData(data.plant_species, data.nickname, data.fact),plantid)
+
   .then(function () {
     onShowPlants(event)
   })
     .catch(ui.plantFailure)
 
     plantid=""
+
     $('#updatePlant').closest('form').find('input[type=text], textarea').val('')
     $('#contentdiv').show(800)
 }
 
-// ID GRABBER 'id'
-const onUpdatePlantsid = function(event){
-   plantid= $(event.target).data('id')
+// ----------------- UPDATE PLANT ID GRABBER 'id' -----------------
+const onUpdatePlantsid = function(event) {
+    plantid = $(event.target).data('id')
+    plant_species = $(event.target).data('plant_species')
+    plantNickname = $(event.target).data('nickname')
+    plantFacts = $(event.target).data('facts')
     $('#updatePlant').show(800)
-  $('#contentdiv').hide(800)
-
-
+    $('#contentdiv').hide(800)
+    // $('#plant_species').closest('form').find('input[type=text], textarea').val('BOO')
+    $("input[name*='plant_species']" ).val(plant_species);
+      $("input[name*='nickname']" ).val(plantNickname);
+        $("input[name*='fact']" ).val(plantFacts);
 
 }
 
-// Button Handlers
+// ----------------- Button Handlers -----------------
 const showAddPlant = function () {
       $('#addPlant').show(800)
     $('.totodile').hide(800)

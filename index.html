@@ -1,116 +1,123 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>B U L B A S A U R U S</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>B U L B A S A U R U S</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-      <style>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500&display=swap');
-    </style>
-    </head>
+  </style>
+</head>
 
-    <body>
-      <!-- MAILMAN MESSAGE CENTER -->
-        <p id="message" class="mailman"></p>
+<body>
+  <!-- MAILMAN MESSAGE CENTER -->
+  <p id="message" class="mailman"></p>
 
-      <!-- Sign in Form -->
-      <form id="sign-in" class="login">
-  <fieldset>
-    <legend> SIGN IN </legend>
-    <input type="text" name="credentials[email]" placeholder="user@email.com">
-    <input type="password" name="credentials[password]" placeholder="Password">
+  <!-- Sign in Form -->
+  <form id="sign-in" class="login">
+    <fieldset>
+      <legend> SIGN IN </legend>
+      <input type="text" name="credentials[email]" placeholder="user@email.com">
+      <input type="password" name="credentials[password]" placeholder="Password">
 
-    <input type="submit" class="btn-gradient green normal" value="sign in!">
-
-
-  </fieldset>
-</form>
-<!-- SIGN UP yo -->
-      <form id="sign-up" class="signUp">
-  <fieldset>
-    <legend> SIGN UP </legend>
-    <input type="text" name="credentials[email]" placeholder="user@email.com">
-    <input type="password" name="credentials[password]" placeholder="Password">
-    <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
-    <input type="submit" class="btn-gradient green normal" value="sign up!">
-  </fieldset>
-</form>
-<!-- CHANGE PASSWORD -->
-<form id="change-password" class="change-password">
-  <fieldset>
-    <legend> CHANGE PASSWORD </legend>
-    <input type="text" name="passwords[old]" placeholder="Old password">
-    <input type="password" name="passwords[new]" placeholder="New password">
-    <input type="submit" class="btn-gradient green normal" value="Change Password">
-  </fieldset>
-</form>
+      <input type="submit" class="btn-gradient green normal" value="sign in!">
 
 
-
-    <!-- FORM TO ADD PLANT THE FORMMMMM -->
-    <form id="addPlant" class="addPlant">
-<fieldset>
-  <legend> Add Plant </legend>
-  <input type="text" name="plant_species" placeholder="Species name">
-    <input type="text" name="nickname" placeholder="Plant nickname">
-    <input type="text" name="fact" placeholder="Fun Fact">
-  <input type="submit" class="btn-gradient green normal" value="Add Plant!">
-</fieldset>
-</form>
-
-<!-- FORM TO UPDATE PLANT FORM -->
-<form id="updatePlant" class="updatePlant">
-<fieldset>
-<legend> Update Herb </legend>
-<input type="text" name="plant_species" placeholder="Species name">
-<input type="text" name="nickname" placeholder="Plant nickname">
-<input type="text" name="fact" placeholder="Fun Fact">
-<input id="updatebutton" type="submit" class="btn-update btn-gradient green normal" value="Update Plant!">
-</fieldset>
-</form>
-
-
-<!-- FUN IMAGE PLACEMENT -->
-<div class="bulbasaur">
-<iframe src="https://giphy.com/embed/xUPGcgIWt3RSVIIydi" width="130" height="130" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p></div>
+    </fieldset>
+  </form>
+  <!-- SIGN UP yo -->
+  <form id="sign-up" class="signUp">
+    <fieldset>
+      <legend> SIGN UP </legend>
+      <input type="text" name="credentials[email]" placeholder="user@email.com">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="confirm password">
+      <input type="submit" class="btn-gradient green normal" value="sign up!">
+    </fieldset>
+  </form>
+  <!-- CHANGE PASSWORD -->
+  <form id="change-password" class="change-password">
+    <fieldset>
+      <legend> CHANGE PASSWORD </legend>
+      <input type="text" name="passwords[old]" placeholder="Old password">
+      <input type="password" name="passwords[new]" placeholder="New password">
+      <input type="submit" class="btn-gradient green normal" value="Change Password">
+    </fieldset>
+  </form>
 
 
 
+  <!-- FORM TO ADD PLANT THE FORMMMMM -->
+  <form id="addPlant" class="addPlant">
+    <fieldset>
+      <legend> Add Plant </legend>
+      <input type="text" name="plant_species" placeholder="Species name">
+      <input type="text" name="nickname" placeholder="Plant nickname">
+      <input type="text" name="fact" placeholder="Fun Fact">
+      <input type="submit" class="btn-gradient green normal" value="Add Plant!">
+    </fieldset>
+  </form>
+
+  <!-- FORM TO UPDATE PLANT FORM -->
+  <form id="updatePlant" class="updatePlant">
+    <fieldset>
+      <legend> Update Herb </legend>
+      <input id="plant_species" type="text" name="plant_species" placeholder="Species name">
+
+      <input id ="nickname" type="text" name="nickname" placeholder="Plant nickname">
+
+      <input id= "facts" type="text" name="fact" placeholder="Fun Fact">
+
+      <input id="updatebutton" type="submit" class="btn-update btn-gradient green normal" value="Update Plant!">
+    </fieldset>
+  </form>
 
 
-<!-- BUTTON BAR : Navigation   -->
-      <div class="buttonbar">
-      <button id="signout" class="btn-gradient green normal"> Sign Out </button>
-      <br>
-      <br>
-      <button id="newPassword" class="btn-gradient green normal"> New Password </button>
-      <br>
-      <br>
-      <button id="viewplants" class="btn-gradient green normal"> View Plants
-      </button>
-      <br>
-      <br>
-      <button id="addPlantButton" class="btn-gradient green normal"> Add Plant
-      </button>
-       <br>
-       <br>
-    </div>
+  <!-- FUN IMAGE PLACEMENT -->
+  <div class="bulbasaur">
+    <iframe src="https://giphy.com/embed/xUPGcgIWt3RSVIIydi" width="130" height="130" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <p></p>
+  </div>
 
-    <!-- Content divs -->
-    <div id="contentdiv" class="content"></div>
 
-<!-- FOOTER DESIGN  -->
-      <div id="grad1" class="footer">Bulbasaurus™</div>
 
-<!--  -->
-<div class ="totodile">
-<iframe src="https://giphy.com/embed/Fm0beIcvTQhUY" width="510" height="580" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
 
-    </body>
+
+  <!-- BUTTON BAR : Navigation   -->
+  <div class="buttonbar">
+    <button id="signout" class="btn-gradient green normal"> Sign Out </button>
+    <br>
+    <br>
+    <button id="newPassword" class="btn-gradient green normal"> New Password </button>
+    <br>
+    <br>
+    <button id="viewplants" class="btn-gradient green normal"> View Plants
+    </button>
+    <br>
+    <br>
+    <button id="addPlantButton" class="btn-gradient green normal"> Add Plant
+    </button>
+    <br>
+    <br>
+  </div>
+
+  <!-- Content divs -->
+  <div id="contentdiv" class="content"></div>
+
+  <!-- FOOTER DESIGN  -->
+  <div id="grad1" class="footer">Bulbasaurus™</div>
+
+  <!--  -->
+  <div class="totodile">
+    <iframe src="https://giphy.com/embed/Fm0beIcvTQhUY" width="510" height="580" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+
+</body>
+
 </html>
