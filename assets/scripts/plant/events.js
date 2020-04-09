@@ -110,7 +110,6 @@ $('#updatePlant').hide(800)
   $('.totodile').hide(800)
 }
 // const deletePlant = function (event) {
-//   console.log('you are clicking' + event.target.id)
 //   api.deletePlant(event.target.id)
 //     .then(ui.plantDeleted)
 //     .catch(ui.plantFailure)
