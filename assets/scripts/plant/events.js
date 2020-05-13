@@ -24,6 +24,7 @@ const onShowPlants = function (event) {
 const onDeletePlants = (event) => {
   const id = $(event.target).data('id')
   api.removePlants(id)
+
     .then(function () {
       onShowPlants(event)
     })
@@ -84,6 +85,8 @@ const onUpdatePlantsid = function(event) {
     plant_species = $(event.target).data('plant_species')
     plantNickname = $(event.target).data('nickname')
     plantFacts = $(event.target).data('facts')
+
+
     $('#updatePlant').show(800)
     $('#contentdiv').hide(800)
     // $('#plant_species').closest('form').find('input[type=text], textarea').val('BOO')
