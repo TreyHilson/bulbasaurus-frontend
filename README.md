@@ -29,17 +29,16 @@ This was also my first time utilizing Handlebars and I had a lot of fun expireme
 
 
 
-Version 1
-User Stories
+# Version 1 User Stories
 
-As a user I want to be able to sign up with email, pw, pwc.
-As a user I want to be able to sign in with email and pw
-As a user I want to be able to change password
-As a user I want to be able to sign out
-As a user I want view all my plants
-As a user I want add a new plant planet_species, nickname, and fact
-As a user I want edit plant planet_species, nickname, and fact
-As a user I want delete plant
+<p>As a user I want to be able to sign up with email, pw, pwc.</p>
+<p>As a user I want to be able to sign in with email and pw</p>
+<p>As a user I want to be able to change password</p>
+<p>As a user I want to be able to sign out</p>
+<p>As a user I want view all my plants</p>
+<p>As a user I want add a new plant planet_species, nickname, and fact</p>
+<p>As a user I want edit plant planet_species, nickname, and fact</p>
+<p>As a user I want delete plant</p>
 Relationships
 
 User has many Plants
