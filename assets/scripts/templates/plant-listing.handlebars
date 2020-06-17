@@ -2,6 +2,7 @@
 
 {{#each plants as |plant|}}
   {{log plant}}
+  <div class="database">
   <section class="section" data-id="{{plant.id}}">
     <h6>Plant Species:</h6>
     <h3>
@@ -25,7 +26,7 @@
     data-plant_species="{{plant.plant_species}}" data-nickname="{{plant.nickname}}"
     data-facts="{{plant.facts}}"> Update Plant </button>
   </section>
-
+</div>
 {{/each}}
 
 {{else}}

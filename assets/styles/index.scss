@@ -15,7 +15,9 @@ body {
   display: none;
 }
 //  CONTENT DIV
+
 #contentdiv {
+  overflow: scroll;
   max-width:80%;
     max-height:800px;
    margin:2rem auto;
@@ -74,11 +76,12 @@ position: fixed;
   }
 
 .buttonbar {
+  flex: auto;
 text-align: center;
 display: inline;
-position: absolute;
-  right: 0px;
-  top: 222px;
+position: fixed;
+  bottom: 10%;
+  left: 33%;
 
 
   }
@@ -86,10 +89,14 @@ position: absolute;
   // totodile ---------------
 
   .totodile {
-    left: 36%;
+    flex: auto;
+    left: 33%;
     top: 20%;
     position: fixed;
-    pointer-events: none
+    pointer-events: none;
+    text-align: center;
+    overflow: scroll;
+
   }
 
 

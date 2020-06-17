@@ -120,9 +120,9 @@ $('#updatePlant').hide(800)
 //
 const addHandlers = () => {
   $('.content').on('click', '.btn-delete', onDeletePlants)
-    $('.content').on('click', '.btn-update', onUpdatePlantsid)
-    $('#addPlantButton').on('click', showAddPlant)
-    $('#newPassword').on('click', showChangePassword)
+  $('.content').on('click', '.btn-update', onUpdatePlantsid)
+  $('#addPlantButton').on('click', showAddPlant)
+  $('#newPassword').on('click', showChangePassword)
 
 
 }
