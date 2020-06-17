@@ -29,6 +29,7 @@ $(() => {
   $('#updatePlant').hide()
     $('#contentdiv').hide()
       $('.totodile').hide()
+      $('.totodile2').hide()
 
 
 

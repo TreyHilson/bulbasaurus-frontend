@@ -25,6 +25,7 @@ const signInSuccess = function (data) {
       $('#sign-up').hide(2000)
       $('#sign-in').hide(2000)
       $('.totodile').show(800)
+      $('.totodile2').show(800)
 
 
 

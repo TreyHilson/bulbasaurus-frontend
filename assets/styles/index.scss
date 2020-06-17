@@ -31,6 +31,7 @@ body {
   left: 10%;
   top: 0;
 position: fixed;
+display: flex;
 
 
   background: red;
@@ -78,24 +79,36 @@ position: fixed;
 .buttonbar {
   flex: auto;
 text-align: center;
-display: inline;
+flex-direction: row;
 position: fixed;
   bottom: 10%;
-  left: 33%;
+  left: 30%;
+  justify-content: center;
 
 
   }
 
-  // totodile ---------------
+  // totodile Fun Homepage Image ---------------
 
   .totodile {
-    flex: auto;
     left: 33%;
     top: 20%;
     position: fixed;
     pointer-events: none;
     text-align: center;
-    overflow: scroll;
+justify-content: center;
+display: flex;
+
+  }
+
+  .totodile2 {
+    left: 30%;
+    top: 60%;
+    position: fixed;
+    pointer-events: none;
+    text-align: center;
+justify-content: center;
+display: flex;
 
   }
 

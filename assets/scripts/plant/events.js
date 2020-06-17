@@ -18,6 +18,7 @@ const onShowPlants = function (event) {
       $('#addPlant').hide(800)
       $('#updatePlant').hide(800)
       $('.totodile').hide(800)
+      $('.totodile2').hide(800)
 }
 // ------------- Delete plant -----------------//
 
@@ -103,6 +104,7 @@ const showAddPlant = function () {
     $('#contentdiv').hide(800)
     $('#updatePlant').hide(800)
     $('.change-password').hide(800)
+    $('.totodile2').hide(800)
 }
 
 const showChangePassword = function () {
@@ -111,6 +113,7 @@ $('#contentdiv').hide(800)
 $('#addPlant').hide(800)
 $('#updatePlant').hide(800)
   $('.totodile').hide(800)
+  $('.totodile2').hide(800)
 }
 // const deletePlant = function (event) {
 //   api.deletePlant(event.target.id)
